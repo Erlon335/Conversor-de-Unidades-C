@@ -1,6 +1,8 @@
 #ifndef DADOS_H
 #define DADOS_H
 
-// protótipos...
+#include <stdio.h>
+
+void converter_megabytes(double megabytes);
 
 #endif
