@@ -54,8 +54,8 @@ int main() {
                 converterMassa();
                 break;
             case 3:
-                printf("\n--- Conversao de Voluma---\n");
-                converterVoluma();
+                printf("\n--- Conversao de Volume---\n");
+                converterVolume();
                 break;
             case 4:
                 printf("\n--- Conversao de Temperatura---\n");
@@ -76,11 +76,11 @@ int main() {
             /*case 8:
                 printf("\n--- Conversao de Tempo---\n");
                 converterTempo();
-                break;
+                break;*/
             case 9:
                 printf("\n--- Conversao de Bits/Bytes ---\n");
                 converterDados();
-                break;*/
+                break;
             case 0:
                 printf("Saindo do programa. Ate logo!\n");
                 exit(0);
