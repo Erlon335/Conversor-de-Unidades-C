@@ -1,4 +1,3 @@
-
 <h1 align="center"><img align="center" style="border-radius: 50%;" src="https://moodle.embarcatech.cepedi.org.br/pluginfile.php/1/theme_moove/logo/1733422525/Group%20658.png" width="200px;" alt=""><br/>Conversor de Unidades C</h1>
 
 <h3 align="center">
@@ -6,7 +5,7 @@
 </h3>
 
 <h4 align="center">
-	🚧 Concluido 🚧
+	🚧  Em Andamento 🚧
 </h4>
 
 ---
@@ -86,7 +85,7 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
     - Comprimento (milimetros, centímetros ,metros, quilometros)
     - Dados (valor, bits, bytes, kilobytes, gigabytes, terabytes, megabytes)
     - Massa (gramas, kilogramas, Toneladas)
-    - Potência (watt)
+    - Potência 
     - Temperatura (celsius, fahrenheit, kelvin)
     - Tempo (segundos, minutos, horas)
     - Velocidade (metrosPorSegundo)
@@ -124,6 +123,7 @@ $ gcc -Wall -Wextra -g3 main.c unidades/area/area.c unidades/comprimento/comprim
 # Executw o Programa
 $ Após a compilação, execute o programa main.exe.
 ```
+
 
 ---
 
