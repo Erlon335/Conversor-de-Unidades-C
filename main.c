@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "unidades/comprimento/comprimento.h"
-#include "unidades/massa/massa.h"
-#include "unidades/volume/volume.h"
-#include "unidades/temperatura/temperatura.h"
-#include "unidades/velocidade/velocidade.h"
-//#include "unidades/potencia/potencia.h"
 #include "unidades/area/area.h"
-#include "unidades/tempo/tempo.h"
+#include "unidades/comprimento/comprimento.h"
 #include "unidades/dados/dados.h"
+#include "unidades/massa/massa.h"
+//#include "unidades/potencia/potencia.h"
+#include "unidades/temperatura/temperatura.h"
+#include "unidades/tempo/tempo.h"
+#include "unidades/velocidade/velocidade.h"
+#include "unidades/volume/volume.h"
 
 void exibirMenuPrincipal() {
     printf("\n ========== Conversor de Unidades ==========\n");

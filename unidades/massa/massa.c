@@ -3,31 +3,31 @@
 
 void converterMassa() {
     int tipoUnidade;
-    float entradaG;
     float entradaKg;
-    float entradaT;
+    float entradaG;
+    float entradaLb;
 
-    printf("Digite o valor de entrada\n1 para gramas (g)\n2 para quilogramas (Kg)\n3 para toneladas (T)\n4 para voltar <-\n:");
+    printf("Digite o valor de entrada\n1 para quilograma (kg)\n2 para grama (g)\n3 para libra (lb)\n4 para voltar <-\n:");
     scanf("%d", &tipoUnidade);
 
     switch (tipoUnidade) {
         case 1:
-            printf("Digite o valor em gramas: ");
-            scanf("%f", &entradaG);
-            printf("\nO valor equivalente em Kg eh: %.2f\n", entradaG / 1000);
-            printf("O valor equivalente em T eh: %.2f\n", entradaG / 1000000);
-            break;
-        case 2:
             printf("Digite o valor em quilogramas: ");
             scanf("%f", &entradaKg);
-            printf("\nO valor equivalente em g eh: %.2f\n", entradaKg * 1000);
-            printf("O valor equivalente em T eh: %.2f\n", entradaKg / 1000);
+            printf("\nO valor equivalente em gramas eh: %.2f\n", entradaKg * 1000);
+            printf("O valor equivalente em libras eh: %.2f\n", entradaKg * 2.20462);
+            break;
+        case 2:
+            printf("Digite o valor em gramas: ");
+            scanf("%f", &entradaG);
+            printf("\nO valor equivalente em quilogramas eh: %.2f\n", entradaG / 1000);
+            printf("O valor equivalente em libras eh: %.2f\n", entradaG * 0.00220462);
             break;
         case 3:
-            printf("Digite o valor em toneladas: ");
-            scanf("%f", &entradaT);
-            printf("\nO valor equivalente em g eh: %.2f\n", entradaT * 1000000);
-            printf("O valor equivalente em Kg eh: %.2f\n", entradaT * 1000);
+            printf("Digite o valor em libras: ");
+            scanf("%f", &entradaLb);
+            printf("\nO valor equivalente em quilogramas eh: %.2f\n", entradaLb / 2.20462);
+            printf("O valor equivalente em gramas eh: %.2f\n", entradaLb * 453.592);
             break;
         case 4:
             break;
