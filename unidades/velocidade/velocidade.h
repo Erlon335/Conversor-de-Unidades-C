@@ -4,6 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void converter_velocidade(float metros_por_segundo);
+void converterVelocidade();
 
 #endif

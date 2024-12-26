@@ -1,44 +1,43 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "comprimento.h"
 
-double metros_centimetros(double metros){
+double metrosCentimetros(double metros){
     return (metros * 100.0);
 }
-double metros_quilometros(double metros){
+double metrosQuilometros(double metros){
     return (metros / 1000.0);
 }
-double metros_milimetros(double metros){
+double metrosMilimetros(double metros){
     return (metros * 1000.0);
 }
 
-double centimetros_metros(double centimetros){
+double centimetrosMetros(double centimetros){
     return (centimetros / 100.0);
 }
-double centimetros_quilometros(double centimetros){
+double centimetrosQuilometros(double centimetros){
     return (centimetros / 100000.0);
 }
-double centimetros_milimetros(double centimetros){
+double centimetrosMilimetros(double centimetros){
     return (centimetros * 10.0);
 }
 
-double quilometros_metros(double quilometros){
+double quilometrosMetros(double quilometros){
     return (quilometros * 1000.0);
 }
-double quilometros_centimetros(double quilometros){
+double quilometrosCentimetros(double quilometros){
     return (quilometros * 100000.0);
 }
-double quilometros_milimetros(double quilometros){
+double quilometrosMilimetros(double quilometros){
     return (quilometros * 1000000.0);
 }
 
-double milimetros_metros(double milimetros){
+double milimetrosMetros(double milimetros){
     return (milimetros / 1000.0);
 }
-double milimetros_centimetros(double milimetros){
+double milimetrosCentimetros(double milimetros){
     return (milimetros / 10.0);
 }
-double milimetros_quilometros(double milimetros){
+double milimetrosQuilometros(double milimetros){
     return (milimetros / 1000000.0);
 }
 
@@ -59,21 +58,21 @@ int converterComprimento(){
         "Milimetros para Quilometros"
     };
 
-    int total_opcoes = sizeof(opcoes) / sizeof(opcoes[0]);
+    int totalOpcoes = sizeof(opcoes) / sizeof(opcoes[0]);
     int escolha;
     double valor, resultado;
     char continuar;
 
     do{
         printf("\n === Conversor de Medidas de Comprimento ===\n");
-        for(int i=0; i < total_opcoes; i++){
+        for(int i=0; i < totalOpcoes; i++){
             printf("%d. %s\n", i + 1, opcoes[i]);
         }
 
-        printf("Digite a opcao desejada (1-%d): ", total_opcoes);
+        printf("Digite a opcao desejada (1-%d): ", totalOpcoes);
         scanf("%d", &escolha);
 
-        if (escolha < 1 || escolha > total_opcoes){
+        if (escolha < 1 || escolha > totalOpcoes){
             printf("Opcao Invalida!\n");
             continue;
         }
@@ -82,18 +81,18 @@ int converterComprimento(){
         scanf("%lf", &valor);
 
         switch (escolha) {
-            case 1: resultado = metros_centimetros(valor); break;
-            case 2: resultado = metros_quilometros(valor); break;
-            case 3: resultado = metros_milimetros(valor); break;
-            case 4: resultado = centimetros_metros(valor); break;
-            case 5: resultado = centimetros_quilometros(valor); break;
-            case 6: resultado = centimetros_milimetros(valor); break;
-            case 7: resultado = quilometros_metros(valor); break;
-            case 8: resultado = quilometros_centimetros(valor); break;
-            case 9: resultado = quilometros_milimetros(valor); break;
-            case 10: resultado = milimetros_metros(valor); break;
-            case 11: resultado = milimetros_centimetros(valor); break;
-            case 12: resultado = milimetros_quilometros(valor); break;
+            case 1: resultado = metrosCentimetros(valor); break;
+            case 2: resultado = metrosQuilometros(valor); break;
+            case 3: resultado = metrosMilimetros(valor); break;
+            case 4: resultado = centimetrosMetros(valor); break;
+            case 5: resultado = centimetrosQuilometros(valor); break;
+            case 6: resultado = centimetrosMilimetros(valor); break;
+            case 7: resultado = quilometrosMetros(valor); break;
+            case 8: resultado = quilometrosCentimetros(valor); break;
+            case 9: resultado = quilometrosMilimetros(valor); break;
+            case 10: resultado = milimetrosMetros(valor); break;
+            case 11: resultado = milimetrosCentimetros(valor); break;
+            case 12: resultado = milimetrosQuilometros(valor); break;
 }
 
 

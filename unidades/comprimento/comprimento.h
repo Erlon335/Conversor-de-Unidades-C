@@ -1,21 +1,21 @@
 #ifndef COMPRIMENTO_H
 #define COMPRIMENTO_H
 
-double metros_centimetros(double metros);
-double metros_quilometros(double metros);
-double metros_milimetros(double metros);
+double metrosCentimetros(double metros);
+double metrosQuilometros(double metros);
+double metrosMilimetros(double metros);
 
-double centimetros_metros(double centimetros);
-double centimetros_quilometros(double centimetros);
-double centimetros_milimetros(double centimetros);
+double centimetrosMetros(double centimetros);
+double centimetrosQuilometros(double centimetros);
+double centimetrosMilimetros(double centimetros);
 
-double quilometros_metros(double quilometros);
-double quilometros_centimetros(double quilometros);
-double quilometros_milimetros(double quilometros);
+double quilometrosMetros(double quilometros);
+double quilometrosCentimetros(double quilometros);
+double quilometrosMilimetros(double quilometros);
 
-double milimetros_metros(double milimetros);
-double milimetros_centimetros(double milimetros);
-double milimetros_quilometros(double milimetros);
+double milimetrosMetros(double milimetros);
+double milimetrosCentimetros(double milimetros);
+double milimetrosQuilometros(double milimetros);
 
 int converterComprimento();
 
