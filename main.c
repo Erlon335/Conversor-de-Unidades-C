@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "unidades/comprimento/comprimento.h"
-//#include "unidades/massa/massa.h"
-//#include "unidades/volume/volume.h"
-//#include "unidades/temperatura/temperatura.h"
+#include "unidades/massa/massa.h"
+#include "unidades/volume/volume.h"
+#include "unidades/temperatura/temperatura.h"
 #include "unidades/velocidade/velocidade.h"
 //#include "unidades/potencia/potencia.h"
 #include "unidades/area/area.h"
@@ -49,18 +49,18 @@ int main() {
                 printf("\n--- Conversao de Comprimento ---\n");
                 converterComprimento();
                 break;
-            /*case 2:
+            case 2:
                 printf("\n--- Conversao de Massa ---\n");
                 converterMassa();
-                break;*/
-            /*case 3:
+                break;
+            case 3:
                 printf("\n--- Conversao de Volume---\n");
                 converterVolume();
-                break;*/
-            /*case 4:
+                break;
+            case 4:
                 printf("\n--- Conversao de Temperatura---\n");
                 converterTemperatura();
-                break;*/
+                break;
             case 5:
                 printf("\n--- Conversao de Velocidade---\n");
                 converterVelocidade();

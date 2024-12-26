@@ -1,33 +1,34 @@
 #include <stdio.h>
+#include "temperatura.h"
 
-void celsius_para_fahrenheit_kelvin(float celsius) {
-    float fahrenheit = (celsius * 9/5) + 32;
+void celsiusParaFahrenheitKelvin(float celsius) {
+    float fahrenheit = (celsius * 9 / 5) + 32;
     float kelvin = celsius + 273.15;
 
-    printf("\n%.2f Em celsius\n", celsius);
-    printf("-> %.2f Em fahrenheit \n", fahrenheit);
-    printf("-> %.2f Em Kelvin\n", kelvin);
+    printf("\n%.2f em Celsius\n", celsius);
+    printf("-> %.2f em Fahrenheit\n", fahrenheit);
+    printf("-> %.2f em Kelvin\n", kelvin);
 }
 
-void fahrenheit_para_celsius_kelvin(float fahrenheit) {
-    float celsius = (fahrenheit - 32) * 5/9;
+void fahrenheitParaCelsiusKelvin(float fahrenheit) {
+    float celsius = (fahrenheit - 32) * 5 / 9;
     float kelvin = celsius + 273.15;
 
-    printf("\n%.2f Em fahrenheit\n", fahrenheit);
-    printf("-> %.2f Em celsius\n", celsius);
-    printf("-> %.2f Em Kelvin\n", kelvin);
+    printf("\n%.2f em Fahrenheit\n", fahrenheit);
+    printf("-> %.2f em Celsius\n", celsius);
+    printf("-> %.2f em Kelvin\n", kelvin);
 }
 
-void kelvin_para_celsius_fahrenheit(float kelvin) {
+void kelvinParaCelsiusFahrenheit(float kelvin) {
     float celsius = kelvin - 273.15;
-    float fahrenheit = (celsius * 9/5) + 32;
+    float fahrenheit = (celsius * 9 / 5) + 32;
 
-    printf("\n%.2f Em kelvin \n", kelvin);
-    printf("-> %.2f Em celsius \n", celsius);
-    printf("-> %.2f Em fahrenheit  \n", fahrenheit);
+    printf("\n%.2f em Kelvin\n", kelvin);
+    printf("-> %.2f em Celsius\n", celsius);
+    printf("-> %.2f em Fahrenheit\n", fahrenheit);
 }
 
-int main() {
+int converterTemperatura() {
     int escolha;
     float temperatura;
 
@@ -37,11 +38,11 @@ int main() {
         printf("\n2 - Fahrenheit");
         printf("\n3 - Kelvin");
         printf("\n0 - Sair");
-        printf("\n ");
+        printf("\n");
         scanf("%d", &escolha);
 
         if (escolha == 0) {
-            printf("Encerrando o programa...\n");
+            printf("Encerrando o conversor de unidades de temperatura. Ate mais!\n");
             break;
         }
 
@@ -50,18 +51,17 @@ int main() {
 
         switch (escolha) {
             case 1:
-                celsius_para_fahrenheit_kelvin(temperatura);
+                celsiusParaFahrenheitKelvin(temperatura);
                 break;
             case 2:
-                fahrenheit_para_celsius_kelvin(temperatura);
+                fahrenheitParaCelsiusKelvin(temperatura);
                 break;
             case 3:
-                kelvin_para_celsius_fahrenheit(temperatura);
+                kelvinParaCelsiusFahrenheit(temperatura);
                 break;
             default:
-                printf("Opção inválida! Tente novamente.\n");
+                printf("Opção invalida! Tente novamente.\n");
         }
-
     } while (escolha != 0);
 
     return 0;
