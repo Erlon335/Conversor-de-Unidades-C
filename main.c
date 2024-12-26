@@ -7,7 +7,7 @@
 #include "unidades/velocidade/velocidade.h"
 #include "unidades/potencia/potencia.h"*/
 #include "unidades/area/area.h"
-/*#include "unidades/tempo/tempo.h"*/
+#include "unidades/tempo/tempo.h"
 #include "unidades/dados/dados.h"
 
 void exibirMenuPrincipal() {
@@ -73,10 +73,10 @@ int main() {
                 printf("\n--- Conversao de Area---\n");
                 converterArea();
                 break;
-            /*case 8:
-                printf("\n--- Conversao de Tempo---\n");
+            case 8:
+                printf("\n--- Conversao de Tempo ---\n");
                 converterTempo();
-                break;*/
+                break;
             case 9:
                 printf("\n--- Conversao de Bits/Bytes ---\n");
                 converterDados();

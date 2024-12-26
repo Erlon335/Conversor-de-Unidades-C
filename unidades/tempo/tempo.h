@@ -1,6 +1,10 @@
 #ifndef TEMPO_H
 #define TEMPO_H
 
-void converterTempo(int tipoUnidade, float valor);
+float segundosParaMinutos(float segundos);
+float minutosParaSegundos(float minutos);
+float minutosParaHoras(float minutos);
+float horasParaMinutos(float horas);
+void converterTempo();
 
 #endif
