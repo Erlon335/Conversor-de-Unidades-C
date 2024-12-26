@@ -3,6 +3,6 @@
 
 #include <stdio.h>
 
-void converter_megabytes(double megabytes);
+void converterDados(double megabytes);
 
 #endif

@@ -32,7 +32,6 @@ double quilometros_milimetros(double quilometros){
     return (quilometros * 1000000.0);
 }
 
-// funções milimetros
 double milimetros_metros(double milimetros){
     return (milimetros / 1000.0);
 }
@@ -101,12 +100,12 @@ int converterComprimento(){
                 printf("Resultado: %.2lf\n", resultado);
 
         
-        printf("\nDeseja realizar outra conversão? (s/n): ");
+        printf("\nDeseja realizar outra conversao? (s/n): ");
         scanf(" %c", &continuar);
 
     } while (continuar == 's' || continuar == 'S');
 
-    printf("Encerrando o programa. Até mais!\n");
+    printf("Encerrando o conversor de unidades de comprimentos. Ate mais!\n");
     return 0;
 
 
