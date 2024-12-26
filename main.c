@@ -4,7 +4,7 @@
 #include "unidades/comprimento/comprimento.h"
 #include "unidades/dados/dados.h"
 #include "unidades/massa/massa.h"
-//#include "unidades/potencia/potencia.h"
+#include "unidades/potencia/potencia.h"
 #include "unidades/temperatura/temperatura.h"
 #include "unidades/tempo/tempo.h"
 #include "unidades/velocidade/velocidade.h"
@@ -65,10 +65,10 @@ int main() {
                 printf("\n--- Conversao de Velocidade---\n");
                 converterVelocidade();
                 break;
-            /*case 6:
+            case 6:
                 printf("\n--- Conversao de Potencia---\n");
                 converterPotencia();
-                break;*/
+                break;
             case 7:
                 printf("\n--- Conversao de Area---\n");
                 converterArea();
