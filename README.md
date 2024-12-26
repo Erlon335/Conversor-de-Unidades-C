@@ -86,7 +86,7 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
     - Comprimento (milimetros, centímetros ,metros, quilometros)
     - Dados (valor, bits, bytes, kilobytes, gigabytes, terabytes, megabytes)
     - Massa (gramas, kilogramas, Toneladas)
-    - Potência 
+    - Potência (watt)
     - Temperatura (celsius, fahrenheit, kelvin)
     - Tempo (segundos, minutos, horas)
     - Velocidade (metrosPorSegundo)
@@ -95,6 +95,35 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
 ---
 
 ## 🚀 Como executar o projeto
+
+💡Siga as instruções abaixo para configurar, compilar e executar o programa.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+  - Sistema operacional Linux, macOS ou Windows (com suporte a Makefile).
+  - [Git](https://git-scm.com) (Opcional, mas recomendado),
+  - [GCC compilador](https://gcc.gnu.org).
+
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+#### 🎲 Rodando o Conversor
+
+```bash
+
+# Caso o projeto esteja em um repositório Git, você pode cloná-lo com o comando:
+$ git clone https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C.git
+cd Conversor-de-Unidades-C
+
+# Compile o projeto executando o comando a partir do diretório raiz:
+$ make
+
+# Ou (se não tiver suporte makefile):
+$ gcc -Wall -Wextra -g3 main.c unidades/area/area.c unidades/comprimento/comprimento.c unidades/dados/dados.c unidades/massa/massa.c unidades/potencia/potencia.c unidades/temperatura/temperatura.c unidades/tempo/tempo.c unidades/velocidade/velocidade.c unidades/volume/volume.c -o output/conversor_de_unidades.exe
+
+# Executw o Programa
+$ Após a compilação, execute o programa main.exe.
+```
 
 ---
 
