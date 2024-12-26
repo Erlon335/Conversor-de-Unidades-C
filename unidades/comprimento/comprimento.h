@@ -1,8 +1,6 @@
 #ifndef COMPRIMENTO_H
 #define COMPRIMENTO_H
 
-// protótipos...
-
 double metros_centimetros(double metros);
 double metros_quilometros(double metros);
 double metros_milimetros(double metros);
@@ -18,5 +16,7 @@ double quilometros_milimetros(double quilometros);
 double milimetros_metros(double milimetros);
 double milimetros_centimetros(double milimetros);
 double milimetros_quilometros(double milimetros);
+
+int converterComprimento();
 
 #endif

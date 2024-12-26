@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include "comprimento.h"
 
-// funções metros
 double metros_centimetros(double metros){
     return (metros * 100.0);
 }
@@ -13,7 +12,6 @@ double metros_milimetros(double metros){
     return (metros * 1000.0);
 }
 
-// funções centimetros
 double centimetros_metros(double centimetros){
     return (centimetros / 100.0);
 }
@@ -24,7 +22,6 @@ double centimetros_milimetros(double centimetros){
     return (centimetros * 10.0);
 }
 
-// funções quilometros
 double quilometros_metros(double quilometros){
     return (quilometros * 1000.0);
 }
@@ -46,7 +43,7 @@ double milimetros_quilometros(double milimetros){
     return (milimetros / 1000000.0);
 }
 
-int main(){
+int converterComprimento(){
 
     const char *opcoes[] = {
         "Metros para Centimetros",
@@ -70,7 +67,6 @@ int main(){
 
     do{
         printf("\n === Conversor de Medidas de Comprimento ===\n");
-        // laço para imprimir o array de opções que foi implementado no inicio, reduzindo a quantidade de prints
         for(int i=0; i < total_opcoes; i++){
             printf("%d. %s\n", i + 1, opcoes[i]);
         }
@@ -87,19 +83,20 @@ int main(){
         scanf("%lf", &valor);
 
         switch (escolha) {
-            case 1: resultado = metros_para_centimetros(valor); break;
-            case 2: resultado = metros_para_quilometros(valor); break;
-            case 3: resultado = metros_para_milimetros(valor); break;
-            case 4: resultado = centimetros_para_metros(valor); break;
-            case 5: resultado = centimetros_para_quilometros(valor); break;
-            case 6: resultado = centimetros_para_milimetros(valor); break;
-            case 7: resultado = quilometros_para_metros(valor); break;
-            case 8: resultado = quilometros_para_centimetros(valor); break;
-            case 9: resultado = quilometros_para_milimetros(valor); break;
-            case 10: resultado = milimetros_para_metros(valor); break;
-            case 11: resultado = milimetros_para_centimetros(valor); break;
-            case 12: resultado = milimetros_para_quilometros(valor); break;
-        }
+            case 1: resultado = metros_centimetros(valor); break;
+            case 2: resultado = metros_quilometros(valor); break;
+            case 3: resultado = metros_milimetros(valor); break;
+            case 4: resultado = centimetros_metros(valor); break;
+            case 5: resultado = centimetros_quilometros(valor); break;
+            case 6: resultado = centimetros_milimetros(valor); break;
+            case 7: resultado = quilometros_metros(valor); break;
+            case 8: resultado = quilometros_centimetros(valor); break;
+            case 9: resultado = quilometros_milimetros(valor); break;
+            case 10: resultado = milimetros_metros(valor); break;
+            case 11: resultado = milimetros_centimetros(valor); break;
+            case 12: resultado = milimetros_quilometros(valor); break;
+}
+
 
                 printf("Resultado: %.2lf\n", resultado);
 

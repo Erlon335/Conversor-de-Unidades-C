@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -I./unidades/comprimento -I./unidades/massa -I./unidades/volume \
+CFLAGS = -Wall -g -I./unidades/comprimento -I./unidades/massa -I./unidades/volume \
           -I./unidades/temperatura -I./unidades/velocidade -I./unidades/potencia \
           -I./unidades/area -I./unidades/tempo -I./unidades/dados
 
@@ -20,7 +20,15 @@ EXEC = conversor_unidades
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
+	@echo "Linkando arquivos-objeto..."
 	$(CC) $(CFLAGS) -o $@ $^
+	@echo "Executável gerado: $(EXEC)"
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+debug: CFLAGS += -DDEBUG
+debug: $(EXEC)
 
 clean:
 	rm -f $(OBJ) $(EXEC)
