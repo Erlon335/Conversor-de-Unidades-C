@@ -44,38 +44,36 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
 /Conversor-de-Unidades-C
 - main.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Ponto de entrada do programa
 - src/ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para o código fonte
-  - features/&emsp;&emsp;&emsp;# Diretório para os arquivos de conversão
-    - area.c&emsp;&emsp;&emsp;# Implementação de conversões de área
-    - comprimento.c&emsp;&emsp;# Implementação de conversões de comprimento
-    - dados.c&emsp;&emsp;&emsp;# Implementação de conversões de dados
-    - massa.c&emsp;&emsp;&emsp;# Implementação de conversões de massa
-    - potencia.c&emsp;&emsp;&emsp;# Implementação de conversões de potência
-    - temperatura.c&emsp;&emsp;&emsp;# Implementação de conversões de temperatura
-    - tempo.c&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de tempo
-    - velocidade.c&emsp;&emsp;&emsp;# Implementação de conversões de velocidade
-    - volume.c&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de volume
+  - features/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para os arquivos de conversão
+    - area.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de área
+    - comprimento.c&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de comprimento
+    - dados.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de dados
+    - massa.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de massa
+    - potencia.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de potência
+    - temperatura.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de temperatura
+    - tempo.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de tempo
+    - velocidade.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de velocidade
+    - volume.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de volume
 
-  - include/&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para os arquivos de cabeçalho
-    - area.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de área
-    - comprimento.h&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de comprimento
-    - comprimento.h&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de comprimento
-    - dados.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de dados
-    - massa.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de massa
-    - potencia.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de potência
-    - temperatura.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de temperatura
-    - tempo.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de tempo
-    - velocidade.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de velocidade
-    - volume.h&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de volume
+  - include/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para os arquivos de cabeçalho
+    - area.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de área
+    - comprimento.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de comprimento
+    - dados.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de dados
+    - massa.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de massa
+    - potencia.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de potência
+    - temperatura.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de temperatura
+    - tempo.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de tempo
+    - velocidade.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de velocidade
+    - volume.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de volume
 
-- build/&emsp;&emsp;&emsp;&emsp;# Diretório para arquivos gerados na compilação com Make
-  - *.o&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivos objeto gerados na compilação com Make
-  - conversor&emsp;&emsp;&emsp;&emsp;# Arquivo binário executável gerados na compilação com Make
+- build/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para arquivos gerados na compilação com Make
+  - *.o&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivos objeto gerados na compilação com Make
+  - conversor&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivo binário executável gerados na compilação com Make
 
-
-- output/&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivo executável gerado pela compilação no terminal
-  - Makefile&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Automação da compilação (caso use o Makefile)
-  - README.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; # Readme do projeto
-  - License.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Licensa de uso
+- output/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivo executável gerado pela compilação no terminal
+  - Makefile&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Automação da compilação (caso use o Makefile)
+  - README.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Readme do projeto
+  - License.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Licensa de uso
 ---
 
 ## ⚙️ Funcionalidades
