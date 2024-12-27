@@ -21,7 +21,7 @@ Tabela de conteúdos
      * [Pré-requisitos](#-pré-requisitos)
    * [Tecnologias](#-tecnologias)
      * [Websites](#-websites)
-     * [Utilitarios](#user-content-server--nodejs----typescript)
+     * [Utilitários](#user-content-server--nodejs----typescript)
    * [Contribuidores](#-contribuidores)
    * [Licença](#-licença)
 <!--te-->
@@ -32,7 +32,7 @@ Tabela de conteúdos
 
 O Conversor de Unidades feito em Linguagem C, é um sistema teste desenvolvido para fixação e experimentação do conteúdo proposto pelo curso.
 
-O sistema utiliza a conversão de uma unidade de medida em outras atraves de interação com Usuários.
+O sistema utiliza a conversão de uma unidade de medida em outras através de interação com Usuários.
 
 Projeto desenvolvido durante o curso de Formação Básica em Software Embarcado oferecido pela [Embarcatech](https://embarcatech.softex.br).
 A Formação Básica em Software Embarcado da Embarcatech é um programa de capacitação profissional técnica destinado a alunos de nível superior e técnico em Tecnologias da Informação e Comunicação (TIC) e áreas correlatas, focado em tecnologias de Sistemas Embarcados.
@@ -145,7 +145,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 👨‍💻 Contribuidores
 
-GRUPO1, SUBGRUPO 3 da Embarcatech <br/>
+GRUPO 1, SUBGRUPO 3 da Embarcatech <br/>
 Mentor: MANOEL MESSIAS DA SILVA JUNIOR
 
 <table>
