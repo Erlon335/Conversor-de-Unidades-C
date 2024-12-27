@@ -13,32 +13,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Passo 1: Checkout do código do repositório
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Passo 2: Instalar ferramentas de análise estática e formatação de código
       - name: Install clang-format and clang-tidy
         run: |
           sudo apt-get update
           sudo apt-get install clang-format clang-tidy build-essential
 
-      # Passo 3: Formatar código com clang-format
       - name: Run clang-format
         run: |
           clang-format -i src/features/*.c include/*.h  # Formata os arquivos .c e .h
 
-      # Passo 4: Rodar análise estática com clang-tidy
       - name: Run clang-tidy on C files
         run: |
           clang-tidy src/features/*.c include/*.h -- -Iinclude
 
-      # Passo 5: Compilar o projeto com GCC
       - name: Compile project
         run: |
           gcc -Wall -Wextra -g3 main.c src/features/area.c src/features/comprimento.c src/features/dados.c src/features/massa.c src/features/potencia.c src/features/temperatura.c src/features/tempo.c src/features/velocidade.c src/features/volume.c -Iinclude -o output/conversor.exe
 
-      # Passo 6: Executar os testes do projeto
       - name: Run tests
         run: |
-          ./output/conversor.exe  # ou algum outro comando para testar seu projeto
+          ./output/conversor.exe
