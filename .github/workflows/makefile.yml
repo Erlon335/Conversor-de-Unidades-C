@@ -1,27 +1,29 @@
-name: Makefile CI
+name: Build and Compile
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: configure
-      run: ./configure
+      - name: Set up GCC and Make
+        run: |
+          sudo apt-get update
+          sudo apt-get install build-essential
 
-    - name: Install dependencies
-      run: make
+      - name: Compile project
+        run: |
+          gcc -Wall -Wextra -g3 main.c src/features/area.c src/features/comprimento.c src/features/dados.c src/features/massa.c src/features/potencia.c src/features/temperatura.c src/features/tempo.c src/features/velocidade.c src/features/volume.c -Iinclude -o output/conversor.exe
 
-    - name: Run check
-      run: make check
-
-    - name: Run distcheck
-      run: make distcheck
+      - name: Run tests
+        run: |
+          ./output/conversor.exe  # ou algum outro comando para testar seu projeto
