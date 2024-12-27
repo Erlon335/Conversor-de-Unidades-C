@@ -1,5 +1,5 @@
-#include "potencia.h"
 #include <stdio.h>
+#include "../include/potencia.h"
 
 float watts_to_kilowatts(float watts) {
     return watts / 1000.0;

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "tempo.h"
+#include "../include/tempo.h"
 
 float segundosParaMinutos(float segundos) {
     return segundos / 60;

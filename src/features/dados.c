@@ -1,5 +1,5 @@
-#include "dados.h"
 #include <stdio.h>
+#include "../include/dados.h"
 
 void converterDados() {
     double valor, bits, bytes, kilobytes, gigabytes, terabytes, megabytes;

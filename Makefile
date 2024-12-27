@@ -1,34 +1,35 @@
+TARGET = build/conversor
+
+SRC_DIR = src
+FEATURES_DIR = $(SRC_DIR)/features
+INCLUDE_DIR = include
+BUILD_DIR = build
+
+SRC_FILES = $(SRC_DIR)/main.c $(wildcard $(FEATURES_DIR)/*.c)
+
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC_FILES))
+
 CC = gcc
-CFLAGS = -Wall -g -I./unidades/comprimento -I./unidades/massa -I./unidades/volume \
-          -I./unidades/temperatura -I./unidades/velocidade -I./unidades/potencia \
-          -I./unidades/area -I./unidades/tempo -I./unidades/dados
+CFLAGS = -I$(INCLUDE_DIR) -Wall -Wextra -std=c99
+LDFLAGS =
 
-SRC = main.c \
-      unidades/comprimento/comprimento.c \
-      unidades/massa/massa.c \
-      unidades/volume/volume.c \
-      unidades/temperatura/temperatura.c \
-      unidades/velocidade/velocidade.c \
-      unidades/potencia/potencia.c \
-      unidades/area/area.c \
-      unidades/tempo/tempo.c \
-      unidades/dados/dados.c
+all: $(TARGET)
 
-OBJ = $(SRC:.c=.o)
-EXEC = conversor_unidades
+$(TARGET): $(OBJ_FILES)
+	@mkdir -p $(BUILD_DIR)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
 
-all: $(EXEC)
-
-$(EXEC): $(OBJ)
-	@echo "Linkando arquivos-objeto..."
-	$(CC) $(CFLAGS) -o $@ $^
-	@echo "Executável gerado: $(EXEC)"
-
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-debug: CFLAGS += -DDEBUG
-debug: $(EXEC)
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
+	@mkdir -p $(dir $@)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	rm -f $(OBJ) $(EXEC)
+	rm -rf $(BUILD_DIR)
+
+help:
+	@echo "Comandos disponíveis:"
+	@echo "  make         - Compila o projeto"
+	@echo "  make clean   - Remove arquivos gerados na compilação"
+	@echo "  make help    - Mostra esta mensagem de ajuda"
+
+.PHONY: all clean help

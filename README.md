@@ -41,41 +41,40 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
 
 ## 🎨 Layout Repositorio Github
 
-/conversor_de_unidades_C
-- main.c
-- Makefile
-- License.md
-- README.md
-- .gitignore
-- unidades/
-    - area/
-      - area.c
-      - area.h
-    - comprimento/
-      - comprimento.c
-      - comprimento.h
-    - dados/
-      - dados.c
-      - dados.h
-    - massa/
-      - massa.c
-      - massa.h
-    - potencia/
-      - potencia.c
-      - potencia.h
-    - temperatura/
-      - temperatura.c
-      - temperatura.h    
-    - tempo/
-      - tempo.c
-      - tempo.h
-    - velocidade/
-      - velocidade.c
-      - velocidade.h
-    - volume/
-      - volume.c
-      - volume.h
+/Conversor-de-Unidades-C
+|-- main.c                  # Ponto de entrada do programa
+|-- src/                    # Diretório para o código fonte
+|   |-- features/           # Diretório para os arquivos de conversão
+|       |-- area.c          # Implementação de conversões de área
+|       |-- comprimento.c   # Implementação de conversões de comprimento
+|       |-- dados.c         # Implementação de conversões de dados
+|       |-- massa.c         # Implementação de conversões de massa
+|       |-- potencia.c      # Implementação de conversões de potência
+|       |-- temperatura.c   # Implementação de conversões de temperatura
+|       |-- tempo.c         # Implementação de conversões de tempo
+|       |-- velocidade.c    # Implementação de conversões de velocidade
+|       |-- volume.c        # Implementação de conversões de volume
+|
+|   |-- include/            # Diretório para os arquivos de cabeçalho
+|       |-- area.h          # Declarações de funções para conversões de área
+|       |-- comprimento.h   # Declarações de funções para conversões de comprimento
+|       |-- dados.h         # Declarações de funções para conversões de dados
+|       |-- massa.h         # Declarações de funções para conversões de massa
+|       |-- potencia.h      # Declarações de funções para conversões de potência
+|       |-- temperatura.h   # Declarações de funções para conversões de temperatura
+|       |-- tempo.h         # Declarações de funções para conversões de tempo
+|       |-- velocidade.h    # Declarações de funções para conversões de velocidade
+|       |-- volume.h        # Declarações de funções para conversões de volume
+|
+|   |-- build/              # Diretório para arquivos gerados na compilação com Make
+|       |-- *.o             # Arquivos objeto gerados na compilação com Make
+|       |-- conversor       # Arquivo binário executável gerados na compilação com Make
+|
 
+|-- output/                 # Arquivo executável gerado pela compilação no terminal
+|-- Makefile                # Automação da compilação (caso use o Makefile)
+|-- README.md                # Readme do projeto
+|-- License.md                # Licensa de uso
 ---
 
 ## ⚙️ Funcionalidades
@@ -119,10 +118,10 @@ cd Conversor-de-Unidades-C
 $ make
 
 # Ou (se não tiver suporte makefile):
-$ gcc -Wall -Wextra -g3 main.c unidades/area/area.c unidades/comprimento/comprimento.c unidades/dados/dados.c unidades/massa/massa.c unidades/potencia/potencia.c unidades/temperatura/temperatura.c unidades/tempo/tempo.c unidades/velocidade/velocidade.c unidades/volume/volume.c -o output/conversor_de_unidades.exe
+$ gcc -Wall -Wextra -g3 main.c src/features/area.c src/features/comprimento.c src/features/dados.c src/features/massa.c src/features/potencia.c src/features/temperatura.c src/features/tempo.c src/features/velocidade.c src/features/volume.c -Iinclude -o output/conversor.exe    
 
-# Executw o Programa
-$ Após a compilação, execute o programa main.exe.
+# Executa o Programa
+$ Após a compilação, execute o programa conversor.exe.
 ```
 
 ---

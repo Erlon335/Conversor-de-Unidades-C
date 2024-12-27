@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "velocidade.h"
+#include "../include/velocidade.h"
 
 float metrosPorSegundoParaKmPorHora(float metrosPorSegundo) {
     return metrosPorSegundo * 3.6;
