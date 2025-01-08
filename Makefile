@@ -1,35 +1,35 @@
-TARGET = build/conversor
-
-SRC_DIR = src
-FEATURES_DIR = $(SRC_DIR)/features
-INCLUDE_DIR = include
-BUILD_DIR = build
-
-SRC_FILES = $(SRC_DIR)/main.c $(wildcard $(FEATURES_DIR)/*.c)
-
-OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(SRC_FILES))
 
 CC = gcc
-CFLAGS = -I$(INCLUDE_DIR) -Wall -Wextra -std=c99
-LDFLAGS =
+CFLAGS = -Wall -Wextra -g3
+INCLUDE_DIR = -Iinclude
 
-all: $(TARGET)
+SRC_DIR = src/features
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES = $(SRC_FILES:.c=.o)
+MAIN = main.c
+OUTPUT_DIR = output
+OUTPUT_FILE = $(OUTPUT_DIR)/conversor.exe
 
-$(TARGET): $(OBJ_FILES)
-	@mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) $(LDFLAGS) -o $@ $^
+all: $(OUTPUT_FILE)
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
-	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c -o $@ $<
+$(OUTPUT_FILE): $(MAIN) $(OBJ_FILES)
+	@mkdir -p $(OUTPUT_DIR)
+	$(CC) $(CFLAGS) $(MAIN) $(OBJ_FILES) $(INCLUDE_DIR) -o $(OUTPUT_FILE)
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE_DIR)
+
+format:
+	clang-format -i $(MAIN) $(SRC_FILES) include/*.h
+
+lint:
+	clang-tidy $(MAIN) $(SRC_FILES) -- -Iinclude
 
 clean:
-	rm -rf $(BUILD_DIR)
+	rm -rf $(OUTPUT_DIR) $(SRC_DIR)/*.o
 
-help:
-	@echo "Comandos disponíveis:"
-	@echo "  make         - Compila o projeto"
-	@echo "  make clean   - Remove arquivos gerados na compilação"
-	@echo "  make help    - Mostra esta mensagem de ajuda"
+test: $(OUTPUT_FILE)
+	@echo "Executando o programa:"
+	./$(OUTPUT_FILE)
 
-.PHONY: all clean help
+.PHONY: all format lint clean test

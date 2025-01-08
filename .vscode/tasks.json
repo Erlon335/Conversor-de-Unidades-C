@@ -1,0 +1,38 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: Compilar o Projeto Completo",
+            "command": "C:\\MinGW\\bin\\gcc.exe",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "main.c",
+                "src/features/area.c",
+                "src/features/comprimento.c",
+                "src/features/dados.c",
+                "src/features/massa.c",
+                "src/features/potencia.c",
+                "src/features/temperatura.c",
+                "src/features/tempo.c",
+                "src/features/velocidade.c",
+                "src/features/volume.c",
+                "-Iinclude",
+                "-o",
+                "output/conversor.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -117,7 +117,9 @@ cd Conversor-de-Unidades-C
 $ make
 
 # Ou (se não tiver suporte makefile):
-$ gcc -Wall -Wextra -g3 main.c src/features/area.c src/features/comprimento.c src/features/dados.c src/features/massa.c src/features/potencia.c src/features/temperatura.c src/features/tempo.c src/features/velocidade.c src/features/volume.c -Iinclude -o output/conversor.exe    
+1. Compilar o Projeto: Pressione "Ctrl+Shift+B".
+2. Executar a Depuração: Pressione F5.
+3. Depurar Linhas: Coloque um breakpoint "F9" e inicie a depuração "F5".    
 
 # Executa o Programa
 $ Após a compilação, execute o programa conversor.exe.
