@@ -5,7 +5,9 @@
 </h3>
 
 <h4 align="center">
-	🚧  Em Andamento 🚧
+
+	🚧  Projeto Finalizado 🚧
+
 </h4>
 
 ---
@@ -20,7 +22,7 @@ Tabela de conteúdos
      * [Pré-requisitos](#-pré-requisitos)
    * [Tecnologias](#-tecnologias)
      * [Websites](#-websites)
-     * [Utilitarios](#user-content-server--nodejs----typescript)
+     * [Utilitários](#user-content-server--nodejs----typescript)
    * [Contribuidores](#-contribuidores)
    * [Licença](#-licença)
 <!--te-->
@@ -31,7 +33,7 @@ Tabela de conteúdos
 
 O Conversor de Unidades feito em Linguagem C, é um sistema teste desenvolvido para fixação e experimentação do conteúdo proposto pelo curso.
 
-O sistema utiliza a conversão de uma unidade de medida em outras atraves de interação com Usuários.
+O sistema utiliza a conversão de uma unidade de medida em outras através de interação com Usuários.
 
 Projeto desenvolvido durante o curso de Formação Básica em Software Embarcado oferecido pela [Embarcatech](https://embarcatech.softex.br).
 A Formação Básica em Software Embarcado da Embarcatech é um programa de capacitação profissional técnica destinado a alunos de nível superior e técnico em Tecnologias da Informação e Comunicação (TIC) e áreas correlatas, focado em tecnologias de Sistemas Embarcados.
@@ -40,41 +42,39 @@ A Formação Básica em Software Embarcado da Embarcatech é um programa de capa
 
 ## 🎨 Layout Repositorio Github
 
-/conversor_de_unidades_C
-- main.c
-- Makefile
-- License.md
-- README.md
-- .gitignore
-- unidades/
-    - area/
-      - area.c
-      - area.h
-    - comprimento/
-      - comprimento.c
-      - comprimento.h
-    - dados/
-      - dados.c
-      - dados.h
-    - massa/
-      - massa.c
-      - massa.h
-    - potencia/
-      - potencia.c
-      - potencia.h
-    - temperatura/
-      - temperatura.c
-      - temperatura.h    
-    - tempo/
-      - tempo.c
-      - tempo.h
-    - velocidade/
-      - velocidade.c
-      - velocidade.h
-    - volume/
-      - volume.c
-      - volume.h
+/Conversor-de-Unidades-C
+- main.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Ponto de entrada do programa
+- src/ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para o código fonte
+  - features/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para os arquivos de conversão
+    - area.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de área
+    - comprimento.c&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de comprimento
+    - dados.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de dados
+    - massa.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de massa
+    - potencia.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de potência
+    - temperatura.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de temperatura
+    - tempo.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de tempo
+    - velocidade.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de velocidade
+    - volume.c&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Implementação de conversões de volume
 
+  - include/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para os arquivos de cabeçalho
+    - area.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de área
+    - comprimento.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de comprimento
+    - dados.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de dados
+    - massa.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de massa
+    - potencia.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de potência
+    - temperatura.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de temperatura
+    - tempo.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de tempo
+    - velocidade.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de velocidade
+    - volume.h&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Declarações de funções para conversões de volume
+
+- build/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Diretório para arquivos gerados na compilação com Make
+  - *.o&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivos objeto gerados na compilação com Make
+  - conversor&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivo binário executável gerados na compilação com Make
+
+- output/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Arquivo executável gerado pela compilação no terminal
+  - Makefile&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Automação da compilação (caso use o Makefile)
+  - README.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Readme do projeto
+  - License.md&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;# Licensa de uso
 ---
 
 ## ⚙️ Funcionalidades
@@ -118,10 +118,12 @@ cd Conversor-de-Unidades-C
 $ make
 
 # Ou (se não tiver suporte makefile):
-$ gcc -Wall -Wextra -g3 main.c unidades/area/area.c unidades/comprimento/comprimento.c unidades/dados/dados.c unidades/massa/massa.c unidades/potencia/potencia.c unidades/temperatura/temperatura.c unidades/tempo/tempo.c unidades/velocidade/velocidade.c unidades/volume/volume.c -o output/conversor_de_unidades.exe
+1. Compilar o Projeto: Pressione "Ctrl+Shift+B".
+2. Executar a Depuração: Pressione F5.
+3. Depurar Linhas: Coloque um breakpoint "F9" e inicie a depuração "F5".    
 
-# Executw o Programa
-$ Após a compilação, execute o programa main.exe.
+# Executa o Programa
+$ Após a compilação, execute o programa conversor.exe.
 ```
 
 
@@ -147,19 +149,19 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## 👨‍💻 Contribuidores
 
-GRUPO1, SUBGRUPO 3 da Embarcatech <br/>
+GRUPO 1, SUBGRUPO 3 da Embarcatech <br/>
 Mentor: MANOEL MESSIAS DA SILVA JUNIOR
 
 <table>
   <tr>
-    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86336670?v=4" width="100px;"/><br/><a href="https://github.com/ferreiramateusalencar">Mateus A. Ferreira<a/><br/><sub>Contribuição: Interface de usuário<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Lider do Projeto">👨‍🚀</a></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/180613216?v=4" width="100px;"/><br/><a href="https://github.com/Erlon335">Érlon S. Alves Neto<a/><br/><sub>Contribuição: readme.md e test<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
-    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113399464?v=4" width="100px;"/><br/><a href="https://github.com/Leo-Luz-code">Leornado R. Luz<a/><br/><sub>Contribuição: Unidade de Veloc. e Dados <sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/86336670?v=4" width="100px;"/><br/><a href="https://github.com/ferreiramateusalencar">Mateus A. Ferreira<a/><br/><sub>Contribuição: Interface de usuário e Arquitetura de software<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Lider do Projeto">👨‍🚀</a></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/180613216?v=4" width="100px;"/><br/><a href="https://github.com/Erlon335">Érlon S. Alves Neto<a/><br/><sub>Contribuição: readme.md e Testes<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
+    <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/113399464?v=4" width="100px;"/><br/><a href="https://github.com/Leo-Luz-code">Leornado R. Luz<a/><br/><sub>Contribuição: Unidades de Veloc. e Dados <sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
     <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/112970376?v=4" width="100px;"/><br/><a href="https://github.com/Dyeorn">João Pedro Jacó<a/><br/><sub>Contribuição: Unidade de Comprimento<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
     <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/128985376?v=4" width="100px;"/><br/><a href="https://github.com/jotave8">João Victor O. de Lima<a/><br/><sub>Contribuição: Unidade de Tempo<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
   </tr>
   <tr>
-     <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/178435161?v=4" width="100px;"/><br/><a href="https://github.com/lauracruzz">Laura B. da Cruz<a/><br/><sub>Contribuição: Unidades de área<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
+     <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/178435161?v=4" width="100px;"/><br/><a href="https://github.com/lauracruzz">Laura B. da Cruz<a/><br/><sub>Contribuição: Unidade de área<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
      <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/89869851?v=4" width="100px;"/><br/><a href="https://github.com/GabrielFOV">Gabriel F. O. Viana<a/><br/><sub>Contribuição: Unidades de Massa e Volume<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
      <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/165080675?v=4" width="100px;"/><br/><a href="https://github.com/2024Nat">Natalia C. Marques <a/><br/><sub>Contribuição: Unidade de Temperatura<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>
      <td align="center"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/64041493?v=4" width="100px;"/><br/><a href="https://github.com/jonathanmachado141">Jonathan M. da Silva<a/><br/><sub>Contribuição: Unidade de Potência<sub/><br/><a href="https://github.com/ferreiramateusalencar/Conversor-de-Unidades-C" title="Integrante">🌐</a></td>

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "comprimento.h"
+#include "../include/comprimento.h"
 
 double metrosCentimetros(double metros){
     return (metros * 100.0);

@@ -1,34 +1,35 @@
+
 CC = gcc
-CFLAGS = -Wall -g -I./unidades/comprimento -I./unidades/massa -I./unidades/volume \
-          -I./unidades/temperatura -I./unidades/velocidade -I./unidades/potencia \
-          -I./unidades/area -I./unidades/tempo -I./unidades/dados
+CFLAGS = -Wall -Wextra -g3
+INCLUDE_DIR = -Iinclude
 
-SRC = main.c \
-      unidades/comprimento/comprimento.c \
-      unidades/massa/massa.c \
-      unidades/volume/volume.c \
-      unidades/temperatura/temperatura.c \
-      unidades/velocidade/velocidade.c \
-      unidades/potencia/potencia.c \
-      unidades/area/area.c \
-      unidades/tempo/tempo.c \
-      unidades/dados/dados.c
+SRC_DIR = src/features
+SRC_FILES = $(wildcard $(SRC_DIR)/*.c)
+OBJ_FILES = $(SRC_FILES:.c=.o)
+MAIN = main.c
+OUTPUT_DIR = output
+OUTPUT_FILE = $(OUTPUT_DIR)/conversor.exe
 
-OBJ = $(SRC:.c=.o)
-EXEC = conversor_unidades
+all: $(OUTPUT_FILE)
 
-all: $(EXEC)
+$(OUTPUT_FILE): $(MAIN) $(OBJ_FILES)
+	@mkdir -p $(OUTPUT_DIR)
+	$(CC) $(CFLAGS) $(MAIN) $(OBJ_FILES) $(INCLUDE_DIR) -o $(OUTPUT_FILE)
 
-$(EXEC): $(OBJ)
-	@echo "Linkando arquivos-objeto..."
-	$(CC) $(CFLAGS) -o $@ $^
-	@echo "Executável gerado: $(EXEC)"
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE_DIR)
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+format:
+	clang-format -i $(MAIN) $(SRC_FILES) include/*.h
 
-debug: CFLAGS += -DDEBUG
-debug: $(EXEC)
+lint:
+	clang-tidy $(MAIN) $(SRC_FILES) -- -Iinclude
 
 clean:
-	rm -f $(OBJ) $(EXEC)
+	rm -rf $(OUTPUT_DIR) $(SRC_DIR)/*.o
+
+test: $(OUTPUT_FILE)
+	@echo "Executando o programa:"
+	./$(OUTPUT_FILE)
+
+.PHONY: all format lint clean test

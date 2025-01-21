@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "temperatura.h"
+#include "../include/temperatura.h"
 
 void celsiusParaFahrenheitKelvin(float celsius) {
     float fahrenheit = (celsius * 9 / 5) + 32;

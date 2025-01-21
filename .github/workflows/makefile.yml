@@ -1,0 +1,40 @@
+name: Build, Lint, and Analyze
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install necessary tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install clang-format clang-tidy build-essential
+
+      - name: Run clang-format (Code Formatting)
+        run: |
+          find src/features -name "*.c" -exec clang-format -i {} +
+          find include -name "*.h" -exec clang-format -i {} +
+
+      - name: Run clang-tidy (Static Analysis)
+        run: |
+          find src/features -name "*.c" | xargs clang-tidy -- -Iinclude
+
+      - name: Compile project
+        run: |
+          gcc -Wall -Wextra -g3 main.c $(find src/features -name "*.c") -Iinclude -o output/conversor.exe
+
+      - name: Run executable (Basic Test)
+        run: |
+          chmod +x output/conversor.exe
+          ./output/conversor.exe || echo "Testes não implementados ou falha na execução"
